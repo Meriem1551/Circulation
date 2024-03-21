@@ -10,8 +10,8 @@ public class Circulation {
         Conducteur c = new Conducteur("Karim", "1234567", 12);// we should add a value for acceleration attribut
         ve.tombe();// tombe method is undefined for Object class so we need to change v with ve
         c.conduit(b);// can't cast to Automobile from Velo
-        c.conduit(b);// we can't acces a method unsing object from the Object class, we change a with
-                     // b
+        c.conduit(ve);// we can't acces a method unsing object from the Object class, we change a with
+                      // b
         vh = b;// can't convert from Object to Vehicule, but we can assign an object that is a
                // of
                // sub class of Vehicule
