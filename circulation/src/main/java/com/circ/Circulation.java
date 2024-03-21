@@ -2,7 +2,7 @@ package com.circ;
 
 public class Circulation {
     public static void main(String[] args) {
-        Object a = new Automobile(0, 50);
+        // Object a = new Automobile(0, 50);
         Automobile b = new Automobile(0, 50);// duplicated variable a so we change it to b
         Object v = new Velo(0, "VTT");
         Velo ve = new Velo(0, "VTT");// duplicated variable v so we change it to ve
