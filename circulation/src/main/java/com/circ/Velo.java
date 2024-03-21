@@ -5,7 +5,7 @@ public class Velo extends Vehicule {
 
     public Velo(int vitesseInitiale, String type) {
         super(2, vitesseInitiale);
-        this.type = type; // this shouldnt work so we need to create getters and setters
+        this.type = type;
     }
 
     public void tombe() {

@@ -13,4 +13,12 @@ public class Automobile extends Vehicule {
         System.out.println("il me reste "
                 + reservoir + "litres");
     }
+
+    int getReservoir() {
+        return this.reservoir;
+    }
+
+    void setReservoir(int r) {
+        this.reservoir = r;
+    }
 }

@@ -2,19 +2,18 @@ package com.circ;
 
 public class Circulation {
     public static void main(String[] args) {
-        // Object a = new Automobile(0, 50);
-        Automobile a = new Automobile(0, 50);
-        // Object v = new Velo(0, "VTT");
-        Velo v = new Velo(0, "VTT");
+        Object a = new Automobile(0, 50);
+        Automobile b = new Automobile(0, 50);// duplicated variable a so we change it to b
+        Object v = new Velo(0, "VTT");
+        Velo ve = new Velo(0, "VTT");// duplicated variable v so we change it to ve
         Vehicule vh = new Vehicule(3, 10);
-        Conducteur c = new Conducteur("Karim", "1234567");
-        v.tombe();
-        // c.conduit((Automobile) v); //can't cast from velo to automobile bcz both are
-        // sub classes of vehicule
-        c.conduit(a);
-        vh = a;
-        ((Automobile) vh).faitLePlein(10);// cannot be cast to class so we should add vh = a; bzc vh automobile is a sub
-                                          // class of vehicule
-
+        Conducteur c = new Conducteur("Karim", "1234567", 12);// we should add a value for acceleration attribut
+        ve.tombe();// tombe method is undefined for Object class so we need to change v with ve
+        c.conduit((Automobile) v);
+        c.conduit(b);// we can't acces a method unsing object from the Object class, we change a with
+                     // b
+        vh = b;// can't convert from Object to Vehicule, but we can assign an Object that is a
+               // sub class of Vehicule
+        ((Automobile) vh).faitLePlein(10);
     }
 }

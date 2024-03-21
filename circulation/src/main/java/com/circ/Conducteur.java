@@ -5,9 +5,10 @@ public class Conducteur {
     private String numeroPermis;
     private int acceleration;
 
-    public Conducteur(String nom, String numeroPermis) {
+    public Conducteur(String nom, String numeroPermis, int acceleration) {
         this.nom = nom;
-        this.numeroPermis = numeroPermis; // this shouldnt work so we need to create getters and setters
+        this.numeroPermis = numeroPermis;
+        this.acceleration = acceleration;
     }
 
     public void conduit(Vehicule v) {
@@ -16,12 +17,31 @@ public class Conducteur {
         v.accelere(acceleration);
     }
 
-    public String getNumeroPermis() {
+    /* GETTERS */
+
+    String getNom() {
+        return this.nom;
+    }
+
+    String getNumeroPermis() {
         return this.numeroPermis;
     }
 
-    public void setNumeroPermis(String n) {
-        this.numeroPermis = n;
+    int getAcceleration() {
+        return this.acceleration;
+    }
+
+    /* SETTERS */
+    void setNom(String newValue) {
+        this.nom = newValue;
+    }
+
+    void setNumeroPermis(String newValue) {
+        this.numeroPermis = newValue;
+    }
+
+    void setAcceleration(int ac) {
+        this.acceleration = ac;
     }
 
 }
